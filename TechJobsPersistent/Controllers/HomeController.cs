@@ -62,6 +62,7 @@ namespace TechJobsPersistent.Controllers
             {
                 JobSkill jobSkills = new JobSkill
                 {
+                    Job = newjob,
                     JobId = newjob.Id,
                     SkillId = int.Parse(skillId)
                 };
