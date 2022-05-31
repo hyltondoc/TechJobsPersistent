@@ -1,6 +1,27 @@
-﻿<h1>Employer: Name</h1>
+﻿@*<h1>Employer: Name </h1>
 
 <div>
     <p>Name: name</p>
     <p>Location: location</p>
 </div>
+*@
+
+@model List<TechJobsPersistent.Models.Employer>
+
+@if (Model.Count == 0)
+{
+    <h1>No Employers Listed</h1>
+}
+else
+{
+      <h1>Employers in the Database</h1>
+
+    <ul>
+        @foreach (var employer in Model)
+        {
+            <li>Employer: @employer.Name , Location: @employer.Location</li>
+            
+        }
+    </ul>
+
+}
